@@ -11,7 +11,10 @@ const client = createTRPCProxyClient<AppRouter>({
 
 async function main() {
   // const result = await client.log.mutate(2); // This will throw an error
-  const result = await client.users.get.query({ userId: "1" }); // gives an error without any input
+  const result = await client.users.update.mutate({
+    userId: "1",
+    name: "Kyle",
+  }); // gives an error without any input
   console.log(result);
 }
 
