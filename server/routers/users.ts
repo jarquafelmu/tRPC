@@ -9,6 +9,8 @@ export const userRouter = t.router({
   // this will expect an input of { userId: string, name: string }
   update: userProcedure
     .input(z.object({ name: z.string() }))
+    // define the contract for the returned object
+    .output(z.object({ id: z.string(), name: z.string() }))
     .mutation((req) => {
       console.log(
         `Updating user ${req.input.userId} to have the name ${req.input.name}`
