@@ -1,7 +1,7 @@
 import { t } from "../trpc";
 import { userRouter } from "./users";
 
-const appRouter = t.router({
+export const appRouter = t.router({
   sayHi: t.procedure.query(() => {
     return "hi";
   }),
@@ -15,6 +15,6 @@ const appRouter = t.router({
       console.log(`Client says: ${req.input}`);
       return true;
     }),
+  // Add the user router to the app router
+  users: userRouter,
 });
-
-export const mergedRouter = t.mergeRouters(appRouter, userRouter);
