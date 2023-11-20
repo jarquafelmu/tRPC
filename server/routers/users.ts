@@ -12,6 +12,7 @@ export const userRouter = t.router({
     // define the contract for the returned object
     .output(z.object({ id: z.string(), name: z.string() }))
     .mutation((req) => {
+      console.log(req.ctx.isAdmin);
       console.log(
         `Updating user ${req.input.userId} to have the name ${req.input.name}`
       );
