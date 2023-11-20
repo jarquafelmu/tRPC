@@ -1,6 +1,8 @@
 import { t } from "../trpc";
 import { userRouter } from "./users";
 
+// A router is a way to describe your API endpoints
+
 export const appRouter = t.router({
   sayHi: t.procedure.query(() => {
     return "hi";
