@@ -9,7 +9,7 @@ const appRouter = t.router({
   sayHi: t.procedure.query(() => {
     return "hi";
   }),
-  logToServer: t.procedure
+  log: t.procedure
     .input((v) => {
       if (typeof v === "string") return v;
 
