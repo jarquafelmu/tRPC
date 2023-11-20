@@ -39,7 +39,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+node_modules
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -4382,3 +4382,4 @@ node_modules/yargs-parser/LICENSE.txt
 node_modules/yargs-parser/package.json
 node_modules/yargs-parser/README.md
 node_modules/yargs-parser/lib/tokenize-arg-string.js
+server/node_modules/.package-lock.json
