@@ -36,6 +36,7 @@ document.addEventListener("click", () => {
 });
 
 async function main() {
+  // the first part is undefined because we have no input to give
   client.users.onUpdate.subscribe(undefined, {
     onData: (id) => {
       console.log(`User ${id} was updated`);
